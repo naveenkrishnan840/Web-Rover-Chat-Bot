@@ -4,7 +4,8 @@
   <!-- Backend -->
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/Google-4285F4?style=for-the-badge&logo=google&logoColor=white" />
+  <img src="https://img.shields.io/badge/DeepSeek-4285F4?style=for-the-badge&logo=deepseek&logoColor=white" />
   <img src="https://img.shields.io/badge/LangChain-121212?style=for-the-badge&logo=chainlink&logoColor=white" />
   <img src="https://img.shields.io/badge/LangGraph-FF6B6B?style=for-the-badge&logo=graph&logoColor=white" />
   <img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" />
@@ -120,12 +121,12 @@ The agent comes equipped with several tools to interact with web pages:
 - Python 3.12+
 - LangChain for AI orchestration
 - Playwright for browser automation
-- OpenAI GPT-4 for decision making
+- Googale Gemini-2.0-flash & Deepseek deepseek/deepseek-r1-distill-llama-70b for decision making
 - FastAPI for API endpoints
 
 ### Frontend
-- Next.js 13+
-- TypeScript
+- React.js
+- JavaScript
 - Tailwind CSS
 - Framer Motion for animations
 
@@ -133,8 +134,8 @@ The agent comes equipped with several tools to interact with web pages:
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/hrithikkoduri18/webrover.git
-   cd webrover
+   git clone https://github.com/naveenkrishnan840/Web-Rover-Chat-Bot.git
+   cd Web-Rover-Chat-Bot
    cd backend
    ```
 
@@ -156,6 +157,8 @@ The agent comes equipped with several tools to interact with web pages:
     LANGCHAIN_TRACING_V2="true",
     LANGCHAIN_ENDPOINT="https://api.smith.langchain.com",
     LANGCHAIN_PROJECT="your_project_name"
+    MODEL_NAME="Your_mode_name"
+    OPENROUTER_BASE_URL="your_openrouter_url"
     ```
 
 5. Run the backend:
