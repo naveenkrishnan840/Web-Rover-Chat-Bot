@@ -4,7 +4,7 @@
   <!-- Backend -->
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/Google-4285F4?style=for-the-badge&logo=google&logoColor=white" />
   <img src="https://img.shields.io/badge/LangChain-121212?style=for-the-badge&logo=chainlink&logoColor=white" />
   <img src="https://img.shields.io/badge/LangGraph-FF6B6B?style=for-the-badge&logo=graph&logoColor=white" />
   <img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" />
@@ -124,8 +124,8 @@ The agent comes equipped with several tools to interact with web pages:
 - FastAPI for API endpoints
 
 ### Frontend
-- Next.js 13+
-- TypeScript
+- React.js
+- JavaScript
 - Tailwind CSS
 - Framer Motion for animations
 
@@ -133,7 +133,7 @@ The agent comes equipped with several tools to interact with web pages:
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/hrithikkoduri18/webrover.git
+   git clone https://github.com/naveenkrishnan840/Web-Rover-Chat-Bot.git
    cd webrover
    cd backend
    ```
