@@ -1,5 +1,5 @@
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_ollama import ChatOllama
+from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
 from backend.src.graph_state import AgentState
 import os
@@ -29,8 +29,8 @@ async def answer_node(state: AgentState):
     input_str = state["input_str"]
 
     prompt_value_answer = prompt_answer.invoke({"notes": notes, "input": input_str})
-    # llm = ChatOllama(model="deepseek-coder:33b", base_url="http://localhost:11434")
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro")
+    # llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro")
+    llm = ChatOpenAI(base_url=os.getenv("OPENROUTER_BASE_URL"), model=os.getenv("MODEL_NAME"))
     response_answer = llm.invoke(prompt_value_answer)
     answer = response_answer.content
 

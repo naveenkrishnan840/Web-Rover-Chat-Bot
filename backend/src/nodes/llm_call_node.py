@@ -1,5 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_ollama import OllamaLLM
+from langchain_openai import ChatOpenAI
+import os
 from backend.src.graph_state import AgentState
 from langchain_google_genai import ChatGoogleGenerativeAI
 
@@ -78,8 +79,8 @@ async def llm_call_node(state: AgentState):
             {"actions_taken": actions_taken, "image": image, "bboxes": bboxes, "input": input_str,
              "master_plan": master_plan})
 
-        # llm = OllamaLLM(model="deepseek-r1:latest", base_url="http://localhost:11434")
-        llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro")
+        # llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro")
+        llm = (ChatOpenAI(base_url=os.getenv("OPENROUTER_BASE_URL"), model=os.getenv("MODEL_NAME")))
         response = llm.invoke(prompt_value)
 
         action = response.content

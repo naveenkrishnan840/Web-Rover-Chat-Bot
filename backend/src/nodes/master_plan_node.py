@@ -1,8 +1,7 @@
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_ollama import ChatOllama, OllamaLLM
-from langchain_experimental.llms.ollama_functions import OllamaFunctions
-
+from langchain_openai import ChatOpenAI
+import os
 # from langgraph.errors import
 from backend.src.graph_state import AgentState, MasterPlanState
 from backend.src.utilities import mark_page
@@ -52,9 +51,9 @@ async def master_plan_node(state: AgentState):
             SystemMessage(content=system_message),
             HumanMessage(content=human_message)
         ]
-        # llm = ChatOllama(model="deepseek-r1:latest", base_url="http://localhost:11434")
-        # llm = OllamaFunctions(model="deepseek-r1:latest", base_url="http://localhost:11434")
-        llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro")
+
+        llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
+        # llm = (ChatOpenAI(base_url=os.getenv("OPENROUTER_BASE_URL"), model=os.getenv("MODEL_NAME")))
         structured_llm = llm.with_structured_output(MasterPlanState)
 
         response = structured_llm.invoke(messages)
