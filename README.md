@@ -135,7 +135,7 @@ The agent comes equipped with several tools to interact with web pages:
 1. Clone the repository
    ```bash
    git clone https://github.com/naveenkrishnan840/Web-Rover-Chat-Bot.git
-   cd webrover
+   cd Web-Rover-Chat-Bot
    cd backend
    ```
 
