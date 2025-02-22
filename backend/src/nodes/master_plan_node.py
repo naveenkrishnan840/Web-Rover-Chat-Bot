@@ -3,8 +3,8 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
 import os
 # from langgraph.errors import
-from backend.src.graph_state import AgentState, MasterPlanState
-from backend.src.utilities import mark_page
+from src.graph_state import AgentState, MasterPlanState
+from src.utilities import mark_page
 
 
 async def master_plan_node(state: AgentState):

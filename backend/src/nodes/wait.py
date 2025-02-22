@@ -1,5 +1,5 @@
 import asyncio
-from backend.src.graph_state import AgentState
+from src.graph_state import AgentState
 
 
 async def wait_node(state: AgentState):

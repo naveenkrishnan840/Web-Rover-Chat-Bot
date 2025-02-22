@@ -1,6 +1,6 @@
 import asyncio
 import platform
-from backend.src.graph_state import AgentState
+from src.graph_state import AgentState
 
 
 async def type_node(state: AgentState):

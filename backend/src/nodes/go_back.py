@@ -1,4 +1,4 @@
-from backend.src.graph_state import AgentState
+from src.graph_state import AgentState
 
 
 async def go_back_node(state: AgentState):

@@ -1,5 +1,5 @@
-from backend.src.graph_state import AgentState
-from backend.src.utilities import mark_page
+from src.graph_state import AgentState
+from src.utilities import mark_page
 
 
 async def annotate_page(state: AgentState):

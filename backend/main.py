@@ -32,6 +32,8 @@ browser_session: Dict[str, Any] = {
 browser_events = asyncio.Queue()
 
 langgraph_app = build_graph()
+
+
 @router.post("/setup-browser")
 async def setup_browser(request: BrowserSetupRequest):
     try:

@@ -1,4 +1,4 @@
-from backend.src.graph_state import AgentState, Action
+from src.graph_state import AgentState, Action
 
 
 async def parse_action_node(state: AgentState):
