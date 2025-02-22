@@ -121,7 +121,7 @@ The agent comes equipped with several tools to interact with web pages:
 - Python 3.12+
 - LangChain for AI orchestration
 - Playwright for browser automation
-- OpenAI GPT-4 for decision making
+- Googale Gemini-2.0-flash & Deepseek deepseek/deepseek-r1-distill-llama-70b for decision making
 - FastAPI for API endpoints
 
 ### Frontend
@@ -157,6 +157,8 @@ The agent comes equipped with several tools to interact with web pages:
     LANGCHAIN_TRACING_V2="true",
     LANGCHAIN_ENDPOINT="https://api.smith.langchain.com",
     LANGCHAIN_PROJECT="your_project_name"
+    MODEL_NAME="Your_mode_name"
+    OPENROUTER_BASE_URL="your_openrouter_url"
     ```
 
 5. Run the backend:
