@@ -19,7 +19,7 @@ function RoverPage () {
 
   const handleDisconnect = async () => {
     try {
-      await fetch('http://localhost:8001/cleanup', {
+      await fetch('http://65.1.139.145:8081/cleanup', {
         method: 'POST',
       });
     } catch (error) {
@@ -36,7 +36,7 @@ function RoverPage () {
     setMessages([]); // Clear previous messages
     
     try {
-      const response = await fetch('http://localhost:8001/query', {
+      const response = await fetch('http://65.1.139.145:8081/query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
