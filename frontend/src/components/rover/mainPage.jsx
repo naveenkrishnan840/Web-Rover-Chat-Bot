@@ -14,7 +14,7 @@ export default function Home() {
     
     try {
       console.log('Attempting to connect...');
-      const response = await fetch('http://65.1.139.145:8081/setup-browser', {
+      const response = await fetch('http://65.1.139.145:8082/setup-browser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
