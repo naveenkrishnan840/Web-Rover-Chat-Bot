@@ -90,7 +90,7 @@ The agent comes equipped with several tools to interact with web pages:
 
 ## Architecture
 
-![Agent Architecture Diagram](/assets/agent_diagram.png)
+![Agent Architecture Diagram](https://github.com/naveenkrishnan840/Web-Rover-Chat-Bot/blob/main/backend/graph.png)
 
 
 ### How It Works
