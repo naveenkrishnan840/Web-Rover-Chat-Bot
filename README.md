@@ -93,7 +93,6 @@ The agent comes equipped with several tools to interact with web pages:
 ![Agent Architecture Diagram](/assets/agent_diagram.png)
 
 
-
 ### How It Works
 
 1. **Task Planning**: When given a task, the agent first creates a master plan using the LLM
@@ -114,6 +113,9 @@ The agent comes equipped with several tools to interact with web pages:
    - Steps taken to complete the task
    - Final answer or result
 
+## Input Prompt:
+  ### Google Flights – Find Cheapest Flight
+    Go to Google Books and search for "Atomic Habits by James Clear". Extract book details like author, publisher, and summary.
 
 ## Tech Stack
 
@@ -211,4 +213,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with ❤️ by [@hrithikkoduri](https://github.com/naveenkrishnan840)
+Made with ❤️ by [@naveenkrishnan840](https://github.com/naveenkrishnan840)
