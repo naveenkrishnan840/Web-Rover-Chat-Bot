@@ -192,6 +192,6 @@ async def query_agent(request: QueryRequest):
 
 app.include_router(router=router)
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8001)
+# if __name__ == "__main__":
+#     import uvicorn
+#     uvicorn.run(app, host="127.0.0.1", port=8001)
