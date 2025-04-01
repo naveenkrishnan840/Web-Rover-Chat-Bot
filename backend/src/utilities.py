@@ -131,7 +131,7 @@ async def setup_browser_2(go_to_page: str):
     }
 
     browser = await playwright.chromium.launch(
-        headless=False,
+        headless=True,
         args=browser_args
     )
 
