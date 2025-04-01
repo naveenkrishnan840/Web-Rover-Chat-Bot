@@ -29,8 +29,10 @@ async def answer_node(state: AgentState):
     input_str = state["input_str"]
 
     prompt_value_answer = prompt_answer.invoke({"notes": notes, "input": input_str})
-    # llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro")
-    llm = ChatOpenAI(base_url=os.getenv("OPENROUTER_BASE_URL"), model=os.getenv("MODEL_NAME"))
+    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.7, max_retries=3)
+    # llm = (ChatOpenAI(base_url=os.getenv("OPENROUTER_BASE_URL"), model=os.getenv("MODEL_NAME"),
+    #                   api_key="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",
+    #                   temperature=0.7, max_retries=3, timeout=None))
     response_answer = llm.invoke(prompt_value_answer)
     answer = response_answer.content
 

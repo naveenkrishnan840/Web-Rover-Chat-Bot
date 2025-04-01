@@ -79,8 +79,10 @@ async def llm_call_node(state: AgentState):
             {"actions_taken": actions_taken, "image": image, "bboxes": bboxes, "input": input_str,
              "master_plan": master_plan})
 
-        # llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro")
-        llm = (ChatOpenAI(base_url=os.getenv("OPENROUTER_BASE_URL"), model=os.getenv("MODEL_NAME")))
+        llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.7, max_retries=3)
+        # llm = (ChatOpenAI(base_url=os.getenv("OPENROUTER_BASE_URL"), model=os.getenv("MODEL_NAME"),
+        #                   api_key="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",
+        #                   temperature=0.7, max_retries=3, timeout=None))
         response = llm.invoke(prompt_value)
 
         action = response.content

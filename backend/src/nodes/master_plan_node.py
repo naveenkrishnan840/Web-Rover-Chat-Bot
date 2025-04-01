@@ -52,7 +52,7 @@ async def master_plan_node(state: AgentState):
             HumanMessage(content=human_message)
         ]
 
-        llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
+        llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.7, max_retries=3)
         # llm = (ChatOpenAI(base_url=os.getenv("OPENROUTER_BASE_URL"), model=os.getenv("MODEL_NAME")))
         structured_llm = llm.with_structured_output(MasterPlanState)
 
