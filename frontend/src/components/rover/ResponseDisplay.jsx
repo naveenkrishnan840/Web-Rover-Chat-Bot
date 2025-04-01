@@ -14,11 +14,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 //   messages: Message[];
 // }
 
-
 export function ResponseDisplay({ messages }) {
   const thoughts = messages.filter(m => m.type === 'thought');
   const actions = messages.filter(m => m.type === 'action');
-  const finalAnswer = messages.find(m => m.type === 'final_answer');
+  const finalAnswer = messages.filter(m => m.type === 'final_answer')
 
   return (
     <div className="flex">
@@ -72,7 +71,7 @@ export function ResponseDisplay({ messages }) {
 
       {/* Main Content - keeping the original formatting */}
       <div className="flex-1 ml-96">
-        {finalAnswer && (
+        {finalAnswer.length > 0 && (
           <div className="max-w-3xl mx-auto p-6">
             <SpotlightCard 
               className="p-6"
@@ -108,7 +107,7 @@ export function ResponseDisplay({ messages }) {
                     ol: ({ children }) => <ol className="list-decimal list-inside space-y-2 mb-4 text-zinc-300">{children}</ol>,
                   }}
                 >
-                  {finalAnswer.content}
+                  { finalAnswer.slice(-1)[0].content }
                 </ReactMarkdown>
               </div>
             </SpotlightCard>

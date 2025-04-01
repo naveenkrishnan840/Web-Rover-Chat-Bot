@@ -5,6 +5,8 @@ import json
 from typing_extensions import Dict, Any
 import asyncio
 import time
+from dotenv import load_dotenv
+
 from src.request_validate import QueryRequest, BrowserSetupRequest
 from src.utilities import setup_browser_2
 from src.build_graph import build_graph
@@ -21,6 +23,8 @@ app.add_middleware(
 )
 router = APIRouter()
 
+load_dotenv()
+
 # Global variable to store browser session
 browser_session: Dict[str, Any] = {
     "playwright": None,
@@ -31,7 +35,7 @@ browser_session: Dict[str, Any] = {
 # Global queue for browser events
 browser_events = asyncio.Queue()
 
-langgraph_app = build_graph()
+langgraph_app = build_graph().compile()
 
 
 @router.post("/setup-browser")
