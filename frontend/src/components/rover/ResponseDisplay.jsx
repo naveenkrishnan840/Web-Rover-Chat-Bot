@@ -107,7 +107,7 @@ export function ResponseDisplay({ messages }) {
                     ol: ({ children }) => <ol className="list-decimal list-inside space-y-2 mb-4 text-zinc-300">{children}</ol>,
                   }}
                 >
-                  { finalAnswer.slice(-1)[0].content }
+                  { messages.filter(m => m.type === 'action').slice(-1)[0].content == "Respond" && finalAnswer.slice(-1)[0].content }
                 </ReactMarkdown>
               </div>
             </SpotlightCard>
