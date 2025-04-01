@@ -90,8 +90,7 @@ The agent comes equipped with several tools to interact with web pages:
 
 ## Architecture
 
-![Agent Architecture Diagram](/assets/agent_diagram.png)
-
+![Agent Architecture Diagram](https://github.com/naveenkrishnan840/Web-Rover-Chat-Bot/blob/main/backend/graph.png)
 
 
 ### How It Works
@@ -113,6 +112,30 @@ The agent comes equipped with several tools to interact with web pages:
 4. **Response Generation**: After gathering necessary information, generates a structured response with:
    - Steps taken to complete the task
    - Final answer or result
+
+## Input Prompt:
+  ### Google Flights – Find Cheapest Flight
+    Go to Google Books and search for "Atomic Habits by James Clear". Extract book details like author, publisher, and summary.
+    Go to Google Flights and search for the cheapest and fastest flights from Chennai (MAA) to Mumbai (BOM) on [DATE]. Extract airline names, ticket prices, layovers (if any), and flight durations.
+
+  ### Google Translate – Translate Text
+    Go to Google Translate and translate the following text from English to French: "Hello, how are you?". Extract the translated text.
+  ### Google Maps – Find Directions
+    Go to Google Maps and search for the fastest route from Kolkata, India to Darjeeling, India by car. Extract distance, estimated travel time, and suggested route details.
+  ### Google Lens – Identify an Object
+    Go to Google Lens and upload an image of the "Eiffel Tower". Identify the landmark, its location, and related information.
+  ### YouTube – Find Trending Videos
+    Go to YouTube and find the top 5 trending videos in India. Extract the video titles, URLs, and view counts.
+  ### Google Search – Get Top News
+    Go to Google Search and find the latest news about "AI advancements in 2025". Extract the top 3 news headlines with their URLs.
+  ### Google Shopping – Find Cheapest Product
+    Go to Google Shopping and search for "iPhone 15 Pro Max". Extract the lowest price, seller name, and product URL.
+  ### Google Weather – Get Forecast
+    Go to Google and search "weather in London today". Extract the temperature, humidity, and weather conditions.
+  ### Google News – Get Breaking News
+    Go to Google News and find the latest breaking news in "Technology". Extract the top 5 headlines with their URLs.
+  ### Google Books – Find a Book
+    Go to Google Books and search for "Atomic Habits by James Clear". Extract book details like author, publisher, and summary.
 
 
 ## Tech Stack
@@ -211,4 +234,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with ❤️ by [@hrithikkoduri](https://github.com/naveenkrishnan840)
+Made with ❤️ by [@naveenkrishnan840](https://github.com/naveenkrishnan840)

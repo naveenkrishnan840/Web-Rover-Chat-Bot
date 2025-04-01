@@ -5,8 +5,6 @@ import json
 from typing_extensions import Dict, Any
 import asyncio
 import time
-from dotenv import load_dotenv
-
 from src.request_validate import QueryRequest, BrowserSetupRequest
 from src.utilities import setup_browser_2
 from src.build_graph import build_graph
@@ -33,9 +31,7 @@ browser_session: Dict[str, Any] = {
 # Global queue for browser events
 browser_events = asyncio.Queue()
 
-load_dotenv()
-
-langgraph_app = build_graph().compile()
+langgraph_app = build_graph()
 
 
 @router.post("/setup-browser")
@@ -198,4 +194,4 @@ app.include_router(router=router)
 
 # if __name__ == "__main__":
 #     import uvicorn
-#     uvicorn.run(app, host="127.0.0.1", port=8002)
+#     uvicorn.run(app, host="127.0.0.1", port=8001)
