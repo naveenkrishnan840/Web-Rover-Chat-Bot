@@ -112,11 +112,17 @@ async def setup_browser_2(go_to_page: str):
 
     # Add browser arguments to appear more human-like
     browser_args = [
-        '--disable-dev-shm-usage',
-        '--disable-blink-features=AutomationControlled',  # Hide automation
-        '--no-sandbox',
-        '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-        # Use a common user agent
+        "--disable-gpu",
+        "--disable-software-rasterizer",  # Ensures no GPU rendering
+        "--no-sandbox",  # Required for running as root in EC2
+        "--disable-dev-shm-usage",  # Prevents crashes in Docker/EC2
+        "--disable-setuid-sandbox",  # Avoid sandbox issues
+        "--disable-blink-features=AutomationControlled",  # Hide automation
+        "--disable-extensions",  # Disable unnecessary extensions
+        "--ignore-certificate-errors",  # Ignore SSL issues
+        "--disable-infobars",  # Remove Chrome popups
+        "--remote-debugging-port=9222",  # Debugging mode (optional)
+        "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
     ]
 
     # Add browser context options
@@ -132,7 +138,8 @@ async def setup_browser_2(go_to_page: str):
 
     browser = await playwright.chromium.launch(
         headless=True,
-        args=browser_args
+        args=browser_args,
+        executable_path="/usr/bin/chromium-browser"
     )
 
     # Create context with the specified options
