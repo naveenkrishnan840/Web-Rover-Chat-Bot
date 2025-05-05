@@ -61,11 +61,10 @@ https://github.com/user-attachments/assets/95ae9afb-3fdf-47f8-857e-f6a1a0d94df5
    - Custom screenshot and element detection system
 
 3. **Visual Processing**
-   - Utilizes Microsoft's Set of Marks (SoM) [@microsoft/SoM](https://github.com/microsoft/SoM) for:
-     - Automated element detection and labeling
-     - Bounding box generation around interactive elements
-     - Numerical labeling system for LLM reference
-     - Real-time page annotation for AI decision making
+    - Automated element detection and labeling
+    - Bounding box generation around interactive elements
+    - Numerical labeling system for LLM reference
+    - Real-time page annotation for AI decision making
 
 4. **AI Decision Making**
    - GPT-4 for understanding context and planning
